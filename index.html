@@ -1,1 +1,618 @@
+<!DOCTYPE html>
+<html lang="id" class="overflow-x-hidden">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ulin KT - Portfolio Web Developer & Designer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Website portfolio Ulin KT. Temukan karya desain, coding, dan project kreatif dari Ulin KT." />
+  <meta name="keywords" content="Ulin KT, Portfolio Web Developer, Desainer UI Indonesia, Frontend Developer, Portofolio Coding" />
+  <meta name="author" content="Ulin KT" />
+
+  <!-- Open Graph (OG) for Social Media Preview -->
+  <meta property="og:title" content="Ulin KT - Portfolio Web Developer & Designer" />
+  <meta property="og:description" content="Kunjungi portfolio resmi Ulin KT berisi karya desain, project coding, dan animasi web modern." />
+  <meta property="og:image" content="assets/img/thumnail.jpg" /> <!-- ganti sesuai file preview -->
+  <meta property="og:url" content="https://ulinkt.my.id" />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body class="smooth-scroll">
+  <div class="hero-grid-bg"></div>
+  <div id="dynamic-blob-container" class="fixed inset-0 overflow-hidden pointer-events-none z-1"></div>
+
+  <nav id="navbar" class="bg-transparent shadow-lg fixed w-full z-50 transition-all duration-300">
+    <div class="container mx-auto max-w-6xl px-4 sm:px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-2xl font-bold navbar-logo-gradient transition duration-300 ease-in-out">
+        Ulin kT
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#hero"
+          class="nav-link nav-link-inactive hover:text-white transition duration-300 ease-in-out font-medium">Home</a>
+        <a href="#about"
+          class="nav-link nav-link-inactive hover:text-white transition duration-300 ease-in-out font-medium">About</a>
+        <a href="#portfolio"
+          class="nav-link nav-link-inactive hover:text-white transition duration-300 ease-in-out font-medium">Portofolio</a>
+        <a href="#contact"
+          class="nav-link nav-link-inactive hover:text-white transition duration-300 ease-in-out font-medium">Contact</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-600 hover:text-white focus:outline-none"
+          aria-label="Toggle mobile menu">
+          <i id="menu-icon" class="fa-solid fa-bars-staggered text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu"
+      class="md:hidden bg-[#030014] py-2 transition-all duration-500 ease-in-out overflow-hidden max-h-0 opacity-0 space-y-4">
+      <a href="#hero"
+        class="nav-link block px-6 py-2 text-white hover:bg-gray-700 transition duration-300 ease-in-out">Beranda</a>
+      <a href="#about"
+        class="nav-link block px-6 py-2 text-white hover:bg-gray-700 transition duration-300 ease-in-out">Tentang</a>
+      <a href="#portfolio"
+        class="nav-link block px-6 py-2 text-white hover:bg-gray-700 transition duration-300 ease-in-out">Portofolio</a>
+      <a href="#contact"
+        class="nav-link block px-6 py-2 text-white hover:bg-gray-700 transition duration-300 ease-in-out">Kontak</a>
+    </div>
+  </nav>
+
+  <section id="hero"
+    class="relative text-white min-h-screen flex flex-col md:flex-row items-center justify-center p-4 sm:p-6 overflow-hidden z-20">
+    <div
+      class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-center relative z-10 text-center md:text-left">
+      <div class="md:w-1/2 flex flex-col items-center md:items-start mb-4 md:mb-0">
+        <div
+          class="relative inline-block px-4 py-2 rounded-full text-sm font-bold mb-4 animate-bounce animate-sparkle backdrop-blur-xl bg-black/40 border border-white/10">
+          <div class="badge-background-blur"></div>
+          <span class="relative z-10 bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
+            Ready to Innovate
+            <i class="fas fa-sparkles text-blue-400 ml-1"></i>
+          </span>
+        </div>
+
+        <div class="relative mb-4">
+          <div class="title-blur-effect"></div>
+          <h2 class="text-4xl md:text-7xl font-bold">
+            <span class="md:block bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+              Web Junior
+            </span>
+            <span class="md:block bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
+              Developer
+            </span>
+          </h2>
+
+        </div>
+        <p class="text-xl md:text-2xl font-light mb-4 typing-animation bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent"
+          id="typing-text"></p>
+        <p class="text-lg md:text-xl font-light mb-8 max-w-lg text-gray-400">
+          Creating an Innovative, Functional, and User-Friendly Website for
+          Digital Solutions.
+        </p>
+
+        <div class="flex flex-row justify-center gap-2 relative z-10 ">
+          <a href="#portfolio"
+            class="relative inline-flex items-center justify-center px-9 py-0 rounded-md text-base font-semibold shadow-xl bg-gradient-to-r from-[#6366f1] to-[#a855f7] border border-white/10 overflow-hidden group sm:px-12 sm:py-3 sm:text-lg">
+            
+            <span
+              class="relative z-10 bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">
+              Proyek
+              <i
+                class="fas fa-external-link-alt ml-2 text-gray-200 group-hover:text-white transition-colors duration-300"></i>
+            </span>
+          </a>
+          <a href="#contact"
+            class="relative inline-flex items-center justify-center px-9 py-3 rounded-md text-base font-semibold shadow-xl bg-[#030014] border border-purple-500/50 overflow-hidden group sm:px-12 sm:py-3 sm:text-lg">
+            
+            <span
+              class="relative z-10 bg-gradient-to-r from-purple-200  to-white bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">
+              Kontak
+              <i class="fa-regular fa-message  ml-2 text-purple-500/50 group-hover:text-white transition-colors duration-300"></i>
+              
+            </span>
+          </a>
+        </div>
+
+       <div class="hidden md:flex flex-nowrap space-x-4 mt-8 justify-center md:justify-start pb-2">
+  <a href="https://mt-pages.vercel.app/" target="_blank" rel="noopener noreferrer"
+    class="glow-btn flex items-center space-x-2 px-4 h-12 rounded-xl bg-black/50 backdrop-blur-xl border border-white/10 group overflow-hidden text-white text-sm">
+    <i class="fab fa-github text-xl text-gray-400 group-hover:text-white transition-colors duration-300"></i>
+    <span>GitHub</span>
+  </a>
+
+  <a href="https://www.instagram.com/uliin_kt?igsh=N3Y4ZWlmcmZjMjhu&utm_source=qr" target="_blank" rel="noopener noreferrer"
+    class="glow-btn flex items-center space-x-2 px-4 h-12 rounded-xl bg-black/50 backdrop-blur-xl border border-purple-500/10 group overflow-hidden text-white text-sm">
+    <i class="fab fa-instagram text-xl text-gray-400 group-hover:text-white transition-colors duration-300"></i>
+    <span>Instagram</span>
+  </a>
+
+  <a href="https://wa.me/6282185475782" target="_blank" rel="noopener noreferrer"
+    class="glow-btn flex items-center space-x-2 px-4 h-12 rounded-xl bg-black/50 backdrop-blur-xl border border-green-500/10 group overflow-hidden text-white text-sm">
+    <i class="fab fa-whatsapp text-xl text-gray-400 group-hover:text-white transition-colors duration-300"></i>
+    <span>WhatsApp</span>
+  </a>
+</div>
+
+      </div>
+
+      <div class="md:w-1/2 flex flex-col items-center justify-center mt-4 md:mt-0">
+        <dotlottie-wc id="hero-lottie" src="https://lottie.host/27fac62b-0b85-45e2-aa76-2b1ad639fc6c/CGKSIL9lS8.lottie"
+          background="transparent" speed="1" class="w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] relative z-10" loop
+          autoplay></dotlottie-wc>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 px-4 sm:px-6 bg-transparent relative z-20">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent mb-2">
+        About Me
+      </h2>
+      <p class="text-xm text-center text-gray-300 mb-12">
+        Turning ideas into digital experiences
+      </p>
+      <div class="flex flex-col md:flex-row md:items-stretch md:space-x-12">
+        <div class="md:w-1/2 mb-8 md:mb-0 flex items-center justify-center">
+          <div class="relative w-full h-64 md:h-[450px] rounded-2xl shadow-xl overflow-hidden group cursor-pointer"
+            id="about-me-image-container">
+            
+            <img id="about-me-image" src="assets/img/belakang.jpg" data-original-src="assets/img/belakang.jpg"
+              data-hover-src="assets/img/depan.jpg" alt="Ulin KT - Web Developer"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out relative z-10" />
+          </div>
+        </div>
+        <div class="md:w-1/2 flex flex-col">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-center md:text-left">
+            <span class="block md:inline bg-indigo-300 bg-clip-text text-transparent">Halo, saya</span>
+            <span class="block md:inline text-white">M Ulin Nuha</span>
+          </p>
+          <p class="text-lg leading-relaxed mb-6 text-gray-300 text-justify">
+            Seorang mahasiswa Sistem Informasi yang memiliki ketertarikan
+            besar pada dunia pengembangan website, teknologi digital, dan
+            inovasi teknologi. Saya senang mengeksplorasi bagaimana teknologi
+            dapat diterapkan untuk menyelesaikan masalah nyata dan menciptakan
+            solusi yang bermanfaat. Saat ini, saya terus belajar dan
+            mengembangkan diri di bidang web development dan dunia digital
+            secasra lebih luas.
+          </p>
+          <div
+            class="relative inline-block px-6 py-3 rounded-xl text-sm text-center font-bold mb-6  glass-cs">
+            <span class="relative z-10 text-white">
+              "Utilizing AI as a professional tool, not a replacement.."
+            </span>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="https://drive.google.com/file/d/18sLSje450Xh-SCUxqQZOLoyc3bC5sVld/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-md text-sm font-semibold shadow-xl bg-gradient-to-r from-indigo-600 to-purple-700 text-white ">
+              <i class="fa-regular fa-file mr-2"></i> Unduh CV
+            </a>
+            <a href="#portfolio"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-md text-sm font-semibold shadow-xl bg-black/50 border border-white/20 hover:bg-black/60 transition-all duration-300">
+              <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
+                <i class="fas fa-code mr-2"></i> Lihat Proyek
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-20 px-4 sm:px-6 bg-transparent relative z-20">
+    <div class="container mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
+        Portfolio Showcase
+      </h2>
+      <p class="text-sm text-center text-gray-300 mb-12 max-w-xl mx-auto">
+        This is the digital footprint of my journey.
+      </p>
+
+      <div class="tab-buttons-glass-container glass-cs rounded-2xl  w-full mb-10">
+        <button
+          class="tab-button transition-all duration-300 active px-4 py-2 sm:px-6 sm:py-3 font-semibold text-base sm:text-lg flex flex-col items-center"
+          data-tab="projects">
+          <i class="fa-solid fa-laptop-code"></i><span>Proyek</span>
+        </button>
+        <button
+          class="tab-button px-4 py-2 sm:px-6 sm:py-3 font-semibold text-base sm:text-lg flex flex-col items-center"
+          data-tab="educations">
+          <i class="fas fa-graduation-cap mb-1"></i><span>Edukasi</span>
+        </button>
+        <button
+          class="tab-button px-4 py-2 sm:px-6 sm:py-3 font-semibold text-base sm:text-lg flex flex-col items-center"
+          data-tab="tech-stack">
+          <i class="fas fa-layer-group mb-1"></i><span>Tech Stack</span>
+        </button>
+      </div>
+
+      <div id="projects-content" class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      </div>
+
+      <div id="educations-content" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div
+          class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-100 mb-3 flex items-center">
+              <i class="fas fa-graduation-cap mr-3 text-indigo-400"></i>Perguruan Tinggi
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Universitas Merangin - Program Studi Sistem Informasi
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-700 text-indigo-100 text-xs font-medium px-2.5 py-0.5 rounded-full">2022 –
+                Sekarang</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-100 mb-3 flex items-center">
+              <i class="fas fa-graduation-cap mr-3 text-indigo-400"></i>Sekolah Menengah Atas
+            </h3>
+            <p class="text-gray-300 mb-4">MA Negeri 3 Merangin</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-700 text-indigo-100 text-xs font-medium px-2.5 py-0.5 rounded-full">2018 –
+                2021</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-100 mb-3 flex items-center">
+              <i class="fas fa-graduation-cap mr-3 text-indigo-400"></i>Sekolah Menengah Pertama
+            </h3>
+            <p class="text-gray-300 mb-4">MTs Negeri 5 Merangin</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-700 text-indigo-100 text-xs font-medium px-2.5 py-0.5 rounded-full">2015 –
+                2018</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-100 mb-3 flex items-center">
+              <i class="fas fa-graduation-cap mr-3 text-indigo-400"></i>Sekolah Dasar
+            </h3>
+            <p class="text-gray-300 mb-4">SD Negeri 149/VI Pinang Merah</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-700 text-indigo-100 text-xs font-medium px-2.5 py-0.5 rounded-full">2009 –
+                2015</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tech-stack-content" class="tab-content  hidden">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="tech-stack-card glass-cs glass-cs">
+            <i class="fab fa-html5 text-4xl text-orange-500"></i>
+            <span class="text-base font-medium text-gray-300">HTML</span>
+          </div>
+          <div class="tech-stack-card glass-cs">
+            <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+            <span class="text-base font-medium text-gray-300">CSS</span>
+          </div>
+          <div class="tech-stack-card glass-cs">
+            <i class="fab fa-js text-4xl text-yellow-500"></i>
+            <span class="text-base font-medium text-gray-300">JavaScript</span>
+          </div>
+          <div class="tech-stack-card glass-cs">
+            <i class="fas fa-wind text-4xl text-cyan-500"></i>
+            <span class="text-base font-medium text-gray-300">Tailwind CSS</span>
+          </div>
+          <div class="tech-stack-card glass-cs">
+            <i class="fab fa-bootstrap text-4xl text-purple-600"></i>
+            <span class="text-base font-medium text-gray-300">Bootstrap</span>
+          </div>
+          <div class="tech-stack-card glass-cs">
+            <i class="fab fa-php text-4xl text-purple-500"></i>
+            <span class="text-base font-medium text-gray-300">PHP</span>
+          </div>
+          <div class="tech-stack-card glass-cs">
+            <i class="fas fa-fire text-4xl text-orange-500"></i>
+            <span class="text-base font-medium text-gray-300">Firebase</span>
+          </div>
+          <div class="tech-stack-card glass-cs">
+            <i class="fa-brands fa-octopus-deploy text-4xl text-orange-500"></i>
+            <span class="text-base font-medium text-gray-300">Vercel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 px-4 sm:px-6 bg-transparent relative z-20">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-4xl font-bold text-center text-indigo-300 mb-2">
+        Contact me
+      </h2>
+      <p class="text-sm text-center text-gray-300 mb-12 max-w-xl mx-auto">
+        Punya pertanyaan? Kirimi saya pesan, dan saya akan segera membalasnya.
+      </p>
+      <div class="flex flex-col space-y-12">
+        <div class="w-full flex flex-col md:flex-row md:space-x-8">
+          <div class="w-full md:w-1/2 p-6 glass-cs2">
+            <h3 class="text-xl font-semibold mb-6 text-white text-center md:text-left">
+              Tinggalkan Komentar
+            </h3>
+            <form id="commentForm" class="space-y-4">
+              <div class="form-group relative">
+                <label for="author" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
+                <div class="relative">
+                  <input type="text" id="author" name="author" required
+                    class="shadow appearance-none border rounded-lg w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-700 text-white"
+                    placeholder="Nama Anda" />
+                  <i class="fas fa-user text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"></i>
+                </div>
+              </div>
+              <div class="form-group relative">
+                <label for="profilePicFile" class="block text-gray-300 text-sm font-bold mb-2">Profile Photo
+                  (Opsional):</label>
+                <div class="relative">
+                  <label for="profilePicFile" class="custom-file-upload">
+                    <i class="fas fa-camera mr-2"></i> choose a profile photo
+                  </label>
+                  <input type="file" id="profilePicFile" name="profilePicFile" accept="image/*" class="hidden" />
+                </div>
+                <span class="text-xs text-gray-400 mt-1 block">Max file size: 5MB</span>
+                <img id="profilePicPreview"
+                  class="profile-pic-preview hidden mt-2 rounded-full w-20 h-20 object-cover border-2 border-indigo-500"
+                  src="#" alt="Ulin KT - Web Developer" />
+              </div>
+              <div class="form-group relative">
+                <label for="content" class="block text-gray-300 text-sm font-bold mb-2">Message :</label>
+                <div class="relative">
+                  <textarea id="content" name="content" required
+                    class="shadow appearance-none border rounded-lg w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-700 text-white"
+                    placeholder="Tulis komentar Anda di sini..."></textarea>
+                  <i class="fas fa-comment-alt text-gray-400 absolute left-3 top-3"></i>
+                </div>
+              </div>
+              <button type="submit"
+                class="btn-submit w-full rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-3 px-4 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg">
+                <i class="fas fa-paper-plane mr-2"></i> Kirim Komentar
+              </button>
+              <div id="loadingIndicator" class="loading-indicator text-center text-indigo-300 hidden">
+                Mengirim komentar...
+              </div>
+              <div id="errorMessage" class="error-message text-center text-red-400 hidden"></div>
+            </form>
+          </div>
+
+          <div class="w-full md:w-1/2 mt-12 md:mt-0 p-6 glass-cs2">
+            <h3 class="text-xl font-semibold mb-6 text-white text-center md:text-left">
+              Comment <span id="comment-count" class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">(0)</span>
+            </h3>
+            <div id="loadingComments" class="text-center text-indigo-300 hidden">
+              Memuat komentar...
+            </div>
+            <div id="noCommentsMessage" class="text-center text-gray-400 hidden">
+              Belum ada komentar. Jadilah yang pertama!
+            </div>
+            <div id="commentsList" class="space-y-6 comments-scroll-container">
+              <div class="comment-card pinned-comment">
+                <div class="comment-avatar-wrapper">
+                  <div class="comment-avatar-initial bg-gradient-to-r from-[#6366f1] to-[#a855f7]">A</div>
+                </div>
+                <div class="comment-content-wrapper">
+                  <div class="comment-header">
+                    <div class="comment-author">Ulin kT <span class="text-xs text-gray-400">(admin)</span></div>
+                    <div class="comment-date"><i class="fas fa-thumbtack mr-1 text-indigo-400"></i> Pinned</div>
+                  </div>
+                  <div class="comment-content">Terima kasih sudah berkunjung! Hubungi saya jika Anda membutuhkan sesuatu.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full flex flex-col md:flex-row justify-between items-start gap-12 mt-12 p-8 rounded-lg glass-cs2">
+          <div class="w-full md:w-1/2 md:pr-12 glass-semi">
+            <h3 class="text-xl font-bold mb-6 text-white text-center md:text-left flex items-center">
+              <span class="w-8 h-1 bg-indigo-400 rounded-full mr-3"></span>
+              Connect with Me
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 max-w-2xl mx-auto">
+              <a href="https://www.instagram.com/uliin_kt?igsh=N3Y4ZWlmcmZjMjhu&utm_source=qr" target="_blank" rel="noopener noreferrer"
+                class="social-card group sm:col-span-2 lg:col-span-2 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <div class="social-card-icon-wrapper w-10 h-10">
+                  <i
+                    class="fab fa-instagram text-2xl text-pink-500 group-hover:text-pink-400 transition-colors duration-300"></i>
+                </div>
+                <div class="social-card-text-content min-w-0">
+                  <span class="social-card-title text-base">Instagram</span>
+                  <span class="social-card-subtitle text-sm">@uliin_kt</span>
+                </div>
+              </a>
+              <a href="https://youtube.com/@linkungan11?si=5uxgwsBF8MZH9z11" target="_blank" rel="noopener noreferrer"
+                class="social-card group hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <div class="social-card-icon-wrapper w-10 h-10">
+                  <i
+                    class="fab fa-youtube text-2xl text-red-500 group-hover:text-red-400 transition-colors duration-300"></i>
+                </div>
+                <div class="social-card-text-content min-w-0">
+                  <span class="social-card-title text-base">Youtube</span>
+                  <span class="social-card-subtitle text-sm">uliin_kt</span>
+                </div>
+              </a>
+              <a href="https://mt-pages.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="social-card group hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <div class="social-card-icon-wrapper w-10 h-10">
+                  <i
+                    class="fab fa-github text-2xl text-gray-400 group-hover:text-gray-300 transition-colors duration-300"></i>
+                </div>
+                <div class="social-card-text-content min-w-0">
+                  <span class="social-card-title text-base">Github</span>
+                  <span class="social-card-subtitle text-sm">uliin_kt</span>
+                </div>
+              </a>
+              <a href="https://www.tiktok.com/@ulinkttzy?_t=ZS-8y9shSlmDPW&_r=1" target="_blank" rel="noopener noreferrer"
+                class="social-card group hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <div class="social-card-icon-wrapper w-10 h-10">
+                  <i
+                    class="fab fa-tiktok text-2xl text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"></i>
+                </div>
+                <div class="social-card-text-content min-w-0">
+                  <span class="social-card-title text-base">Tiktok</span>
+                  <span class="social-card-subtitle text-sm">uliin_kt</span>
+                </div>
+              </a>
+              <a href="https://wa.me/6282185475782" target="_blank" rel="noopener noreferrer"
+                class="social-card group hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <div class="social-card-icon-wrapper w-10 h-10">
+                  <i
+                    class="fab fa-whatsapp text-2xl text-green-500 group-hover:text-green-400 transition-colors duration-300"></i>
+                </div>
+                <div class="social-card-text-content min-w-0">
+                  <span class="social-card-title text-base">Whatsapp</span>
+                  <span class="social-card-subtitle text-sm">082185475782</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="hidden md:block w-px bg-white/10 h-auto self-stretch"></div>
+
+          <div class="w-full md:w-1/2 text-center md:text-left mt-12 md:mt-0">
+            <h3 class="text-3xl font-bold mb-6 text-white">Contact</h3>
+            <p class="text-xm text-gray-300 mb-8">
+              Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita
+              bicara.
+            </p>
+            <div class="text-lg text-gray-200 space-y-4">
+              <p class="mb-2">
+                <i class="fas fa-map-marker-alt mr-2 text-indigo-400"></i>
+                Jambi, Indonesia
+              </p>
+              <p>
+                <i class="fas fa-globe mr-2 text-indigo-400"></i> ulinkt.my.id
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-6 mt-8">
+              <a href="https://wa.me/6282185475782" target="_blank" rel="noopener noreferrer"
+                class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white px-4 py-2 rounded-md text-lg font-semibold shadow-xl hover:from-[#7c3aed} hover:to-[#9333ea] hover:-translate-y-1 hover:shadow-2xl transition duration-500 ease-in-out flex items-center">
+                <i class="fab fa-whatsapp mr-3"></i> Whatsapp Saya
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="project-modal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-glass-background-overlay">
+    <div
+     <div class="relative w-full max-w-screen-xl h-full overflow-y-auto scrollbar-hide"
+      id="modal-content-wrapper">
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center space-x-4">
+          <button id="modal-close-button"
+            class="modal-back-button text-gray-400 hover:text-white text-xl focus:outline-none flex items-center space-x-2">
+            <i class="fas fa-arrow-left text-2xl"></i>
+            <span class="text-lg font-semibold">Kembali</span>
+          </button>
+          <div id="modal-breadcrumbs" class="text-gray-400 text-sm">
+            Portofolio <span class="mx-1">/</span>
+            <span class="font-semibold" id="current-project-breadcrumb">Nama Proyek</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-content" class="flex flex-col md:flex-row gap-8 pt-4">
+        <div class="md:w-1/2 flex flex-col">
+          <h3 id="modal-title" class="text-3xl font-bold text-indigo-300 mb-2 pb-2 border-b border-gray-700"></h3>
+          <p id="modal-description" class="text-lg text-gray-300 leading-relaxed text-justify mb-6"></p>
+
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-md p-3 flex items-center justify-center flex-col">
+              <div class="modal-icon-circle bg-blue-500/20 text-blue-300">
+                <i class="fas fa-code text-xl"></i>
+              </div>
+              <p class="text-gray-300 text-sm mt-2">
+                <span id="modal-tech-count" class="font-semibold text-indigo-300"></span> Total Teknologi
+              </p>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-md p-3 flex items-center justify-center flex-col">
+              <div class="modal-icon-circle bg-purple-500/20 text-purple-300">
+                <i class="fas fa-layer-group text-xl"></i>
+              </div>
+              <p class="text-gray-300 text-sm mt-2">
+                <span id="modal-feature-count" class="font-semibold text-indigo-300"></span> Fitur Utama
+              </p>
+              </div>
+          </div>
+          
+          <button id="modal-live-demo-button"
+            class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white px-6 py-3 rounded-md text-base font-semibold hover:from-[#7c3aed] hover:to-[#9333ea] transition duration-300 flex items-center justify-center mb-6 self-start">
+            Live Demo <i class="fas fa-external-link-alt ml-2"></i>
+          </button>
+
+          <div class="mb-6">
+            <h4 class="text-xl font-semibold text-white mb-3">
+              Technologies Used
+            </h4>
+            <ul id="modal-technologies" class="flex flex-wrap gap-2">
+            </ul>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 flex flex-col">
+          <div class="relative w-full pb-[56.25%] mb-6 rounded-md overflow-hidden modal-image-wrapper">
+            <img id="modal-image" src="" alt="Ulin KT - Web Developer" class="absolute inset-0 w-full h-full object-cover" />
+          </div>
+
+          <div class="modal-key-features-container">
+            <h4 class="text-xl font-semibold text-white mb-3 modal-key-features-title">
+              Key Features
+            </h4>
+            <ul id="modal-features" class="list-disc list-inside text-gray-300 pl-4 space-y-1">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-transparent relative z-20 text-gray-300 py-8 px-4 sm:px-6 text-center">
+    <div class="container mx-auto">
+      <div class="footer-line"></div>
+      <p>&copy; 2024 UlinkT. Semua hak dilindungi.</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="https://mt-pages.vercel.app/" target="_blank" rel="noopener noreferrer"
+          class="text-gray-400 hover:text-white transition duration-300 ease-in-out" aria-label="Profil GitHub"><i
+            class="fab fa-github text-xl"></i></a>
+        <a href="https://www.instagram.com/uliin_kt?igsh=N3Y4ZWlmcmZjMjhu&utm_source=qr" target="_blank" rel="noopener noreferrer"
+          class="text-gray-400 hover:text-white transition duration-300 ease-in-out" aria-label="Profil Instagram"><i
+            class="fab fa-instagram text-xl"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
